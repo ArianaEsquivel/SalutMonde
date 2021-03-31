@@ -13,10 +13,11 @@
 		2D233CA4260EFCB900E05B72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D233CA2260EFCB900E05B72 /* Main.storyboard */; };
 		2D233CA6260EFCBB00E05B72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D233CA5260EFCBB00E05B72 /* Assets.xcassets */; };
 		2D233CA9260EFCBB00E05B72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D233CA7260EFCBB00E05B72 /* LaunchScreen.storyboard */; };
-		2D233CB8260F246B00E05B72 /* Registro1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D233CB7260F246B00E05B72 /* Registro1ViewController.swift */; };
-		2D233CBB260F247F00E05B72 /* Registro2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D233CBA260F247F00E05B72 /* Registro2ViewController.swift */; };
+		2D233CBB260F247F00E05B72 /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D233CBA260F247F00E05B72 /* RegistroViewController.swift */; };
 		2D233CBE260F378000E05B72 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D233CBD260F378000E05B72 /* Service.swift */; };
 		2D233CC1260F6D2700E05B72 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D233CC0260F6D2700E05B72 /* MenuViewController.swift */; };
+		2DA0DB4B2611038300C4CAF1 /* Structutrs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA0DB4A2611038200C4CAF1 /* Structutrs.swift */; };
+		2DA0DB532611A33000C4CAF1 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA0DB522611A33000C4CAF1 /* App.swift */; };
 		310C0BF0F0C0C554874B5B3E /* Pods_SalutMonde.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03FFD96A3074DD05D361A321 /* Pods_SalutMonde.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,10 +31,11 @@
 		2D233CA5260EFCBB00E05B72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D233CA8260EFCBB00E05B72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D233CAA260EFCBB00E05B72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2D233CB7260F246B00E05B72 /* Registro1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registro1ViewController.swift; sourceTree = "<group>"; };
-		2D233CBA260F247F00E05B72 /* Registro2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registro2ViewController.swift; sourceTree = "<group>"; };
+		2D233CBA260F247F00E05B72 /* RegistroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
 		2D233CBD260F378000E05B72 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		2D233CC0260F6D2700E05B72 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		2DA0DB4A2611038200C4CAF1 /* Structutrs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structutrs.swift; sourceTree = "<group>"; };
+		2DA0DB522611A33000C4CAF1 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		BB35FFF981E1A10E3411B12D /* Pods-SalutMonde.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SalutMonde.release.xcconfig"; path = "Target Support Files/Pods-SalutMonde/Pods-SalutMonde.release.xcconfig"; sourceTree = "<group>"; };
 		E25735692030B9A36A486F1B /* Pods-SalutMonde.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SalutMonde.debug.xcconfig"; path = "Target Support Files/Pods-SalutMonde/Pods-SalutMonde.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,19 +73,28 @@
 		2D233C9B260EFCB900E05B72 /* SalutMonde */ = {
 			isa = PBXGroup;
 			children = (
+				2DA0DB512611A2EE00C4CAF1 /* ViewControlers */,
 				2D233C9C260EFCB900E05B72 /* AppDelegate.swift */,
 				2D233C9E260EFCB900E05B72 /* SceneDelegate.swift */,
-				2D233CA0260EFCB900E05B72 /* ViewController.swift */,
 				2D233CA2260EFCB900E05B72 /* Main.storyboard */,
 				2D233CA5260EFCBB00E05B72 /* Assets.xcassets */,
 				2D233CA7260EFCBB00E05B72 /* LaunchScreen.storyboard */,
 				2D233CAA260EFCBB00E05B72 /* Info.plist */,
-				2D233CB7260F246B00E05B72 /* Registro1ViewController.swift */,
-				2D233CBA260F247F00E05B72 /* Registro2ViewController.swift */,
 				2D233CBD260F378000E05B72 /* Service.swift */,
-				2D233CC0260F6D2700E05B72 /* MenuViewController.swift */,
+				2DA0DB4A2611038200C4CAF1 /* Structutrs.swift */,
+				2DA0DB522611A33000C4CAF1 /* App.swift */,
 			);
 			path = SalutMonde;
+			sourceTree = "<group>";
+		};
+		2DA0DB512611A2EE00C4CAF1 /* ViewControlers */ = {
+			isa = PBXGroup;
+			children = (
+				2D233CC0260F6D2700E05B72 /* MenuViewController.swift */,
+				2D233CBA260F247F00E05B72 /* RegistroViewController.swift */,
+				2D233CA0260EFCB900E05B72 /* ViewController.swift */,
+			);
+			path = ViewControlers;
 			sourceTree = "<group>";
 		};
 		85BC6412388BE0949167ECF4 /* Frameworks */ = {
@@ -217,12 +228,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DA0DB532611A33000C4CAF1 /* App.swift in Sources */,
 				2D233CA1260EFCB900E05B72 /* ViewController.swift in Sources */,
-				2D233CBB260F247F00E05B72 /* Registro2ViewController.swift in Sources */,
+				2D233CBB260F247F00E05B72 /* RegistroViewController.swift in Sources */,
 				2D233C9D260EFCB900E05B72 /* AppDelegate.swift in Sources */,
 				2D233CC1260F6D2700E05B72 /* MenuViewController.swift in Sources */,
 				2D233C9F260EFCB900E05B72 /* SceneDelegate.swift in Sources */,
-				2D233CB8260F246B00E05B72 /* Registro1ViewController.swift in Sources */,
+				2DA0DB4B2611038300C4CAF1 /* Structutrs.swift in Sources */,
 				2D233CBE260F378000E05B72 /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -29,14 +29,14 @@ class ViewController: UIViewController {
         ]
         
         self.service.login(endPoint: "login", parameters: parameters) { (isSuccess) in
-            if isSuccess {
+            if isSuccess == true {
 //                self.performSegue(withIdentifier: "logearse", sender: MenuViewController.self)
+                self.alertDefault(with: "Loggeado", andWithMsg: "Ha ingresado correctamente", completion: false)
             }
             else {
-                self.alertDefault(with: "Contraseña incorrecta", andWithMsg: "Verifique que la contraseña sea la misma en ambos campos")
+                self.alertDefault(with: "Campos no válidos", andWithMsg: "Verifique sus datos sean correctos", completion: false)
             }
         }
- 
     }
     
 

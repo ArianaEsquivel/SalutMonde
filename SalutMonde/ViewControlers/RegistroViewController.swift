@@ -8,7 +8,7 @@
 import UIKit
 import Alamofire
 
-class Registro2ViewController: UIViewController {
+class RegistroViewController: UIViewController {
     
     @IBOutlet weak var tfUsuario: UITextField!
     @IBOutlet weak var tfCorreo: UITextField!
@@ -16,9 +16,7 @@ class Registro2ViewController: UIViewController {
     @IBOutlet weak var tfConfirmContrasena: UITextField!
     @IBOutlet weak var btnRegistrarse: UIButton!
 
-    var nombre: String!
-    var appa: String!
-    var apma: String!
+
     var service: Service!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,9 +30,6 @@ class Registro2ViewController: UIViewController {
         let contrasena : String = tfContrasena.text ?? ""
         let confirmContrasena : String = tfConfirmContrasena.text ?? ""
         let parameters: [String: String] = [
-            "first_name": self.nombre,
-            "last_name": self.appa,
-            "second_last_name": self.apma,
             "username": usuario,
             "email": correo,
             "password": contrasena
@@ -43,13 +38,12 @@ class Registro2ViewController: UIViewController {
             self.service.registrar(endPoint: "signup", parameters: parameters) { (isSuccess) in
                 if isSuccess {
 //                    self.performSegue(withIdentifier: "iniciar", sender: ViewController.self)
-                    
-                    self.alertDefault(with: "Registrado", andWithMsg: "Ha sido registrado exitosamente")
+                    self.alertDefault(with: "Registrado", andWithMsg: "Ha sido registrado exitosamente", completion: true)
                 }
             }
         }
         else {
-            self.alertDefault(with: "Contraseña incorrecta", andWithMsg: "Verifique que la contraseña sea la misma en ambos campos")
+            self.alertDefault(with: "Contraseña incorrecta", andWithMsg: "Verifique que la contraseña sea la misma en ambos campos", completion: false)
         }
     }
     
@@ -60,14 +54,22 @@ class Registro2ViewController: UIViewController {
 //            iniciar.tfCorreo.text = self.tfCorreo.text
 //            iniciar.tfCorreo.text!.append(self.tfCorreo.text!)
         }
-        
     }
 
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+    }
 }
 extension UIViewController{
-    func alertDefault(with title:String, andWithMsg description:String){
+    func alertDefault(with title:String, andWithMsg description:String, completion: Bool){
         let alert = UIAlertController(title: title, message: description, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(a) in alert.dismiss(animated: true, completion: nil)}))
+        if completion == true {
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(a) in alert.dismiss(animated: true, completion: { self.dismiss(animated: true, completion: nil) } )}))
+        }
+        else {
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(a) in alert.dismiss(animated: true, completion: nil)}))
+        }
         self.present(alert, animated: true, completion: nil)
     }
+    
 }
