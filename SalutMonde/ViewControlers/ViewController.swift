@@ -31,7 +31,8 @@ class ViewController: UIViewController {
         self.service.login(endPoint: "login", parameters: parameters) { (isSuccess) in
             if isSuccess == true {
 //                self.performSegue(withIdentifier: "logearse", sender: MenuViewController.self)
-                self.alertDefault(with: "Loggeado", andWithMsg: "Ha ingresado correctamente", completion: false)
+//                self.alertDefault(with: "Loggeado", andWithMsg: "Ha ingresado correctamente", completion: false)
+                self.performSegue(withIdentifier: "segueGoToMenu", sender: ViewController.self)
             }
             else {
                 self.alertDefault(with: "Campos no válidos", andWithMsg: "Verifique sus datos sean correctos", completion: false)

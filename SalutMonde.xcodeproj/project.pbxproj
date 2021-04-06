@@ -18,6 +18,12 @@
 		2D233CC1260F6D2700E05B72 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D233CC0260F6D2700E05B72 /* MenuViewController.swift */; };
 		2DA0DB4B2611038300C4CAF1 /* Structutrs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA0DB4A2611038200C4CAF1 /* Structutrs.swift */; };
 		2DA0DB532611A33000C4CAF1 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA0DB522611A33000C4CAF1 /* App.swift */; };
+		2DC3F49B261AE89800FE2CE0 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3F49A261AE89800FE2CE0 /* MenuTableViewController.swift */; };
+		2DC3F4A1261BDE4000FE2CE0 /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3F4A0261BDE4000FE2CE0 /* PerfilViewController.swift */; };
+		2DC3F4A5261BE6C100FE2CE0 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3F4A4261BE6C100FE2CE0 /* MenuTableViewCell.swift */; };
+		2DC3F4AC261BF74700FE2CE0 /* AgregarCamaraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3F4AB261BF74700FE2CE0 /* AgregarCamaraViewController.swift */; };
+		2DC3F4B0261BF7C400FE2CE0 /* ListaCamarasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3F4AF261BF7C400FE2CE0 /* ListaCamarasViewController.swift */; };
+		2DC3F4B3261BF81A00FE2CE0 /* MisFotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3F4B2261BF81A00FE2CE0 /* MisFotosViewController.swift */; };
 		310C0BF0F0C0C554874B5B3E /* Pods_SalutMonde.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03FFD96A3074DD05D361A321 /* Pods_SalutMonde.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +42,12 @@
 		2D233CC0260F6D2700E05B72 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		2DA0DB4A2611038200C4CAF1 /* Structutrs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structutrs.swift; sourceTree = "<group>"; };
 		2DA0DB522611A33000C4CAF1 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		2DC3F49A261AE89800FE2CE0 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		2DC3F4A0261BDE4000FE2CE0 /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
+		2DC3F4A4261BE6C100FE2CE0 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		2DC3F4AB261BF74700FE2CE0 /* AgregarCamaraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgregarCamaraViewController.swift; sourceTree = "<group>"; };
+		2DC3F4AF261BF7C400FE2CE0 /* ListaCamarasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaCamarasViewController.swift; sourceTree = "<group>"; };
+		2DC3F4B2261BF81A00FE2CE0 /* MisFotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisFotosViewController.swift; sourceTree = "<group>"; };
 		BB35FFF981E1A10E3411B12D /* Pods-SalutMonde.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SalutMonde.release.xcconfig"; path = "Target Support Files/Pods-SalutMonde/Pods-SalutMonde.release.xcconfig"; sourceTree = "<group>"; };
 		E25735692030B9A36A486F1B /* Pods-SalutMonde.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SalutMonde.debug.xcconfig"; path = "Target Support Files/Pods-SalutMonde/Pods-SalutMonde.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +87,7 @@
 			children = (
 				2DA0DB512611A2EE00C4CAF1 /* ViewControlers */,
 				2D233C9C260EFCB900E05B72 /* AppDelegate.swift */,
+				2DC3F4A4261BE6C100FE2CE0 /* MenuTableViewCell.swift */,
 				2D233C9E260EFCB900E05B72 /* SceneDelegate.swift */,
 				2D233CA2260EFCB900E05B72 /* Main.storyboard */,
 				2D233CA5260EFCBB00E05B72 /* Assets.xcassets */,
@@ -83,6 +96,7 @@
 				2D233CBD260F378000E05B72 /* Service.swift */,
 				2DA0DB4A2611038200C4CAF1 /* Structutrs.swift */,
 				2DA0DB522611A33000C4CAF1 /* App.swift */,
+				2DC3F49A261AE89800FE2CE0 /* MenuTableViewController.swift */,
 			);
 			path = SalutMonde;
 			sourceTree = "<group>";
@@ -90,9 +104,13 @@
 		2DA0DB512611A2EE00C4CAF1 /* ViewControlers */ = {
 			isa = PBXGroup;
 			children = (
+				2DC3F4A0261BDE4000FE2CE0 /* PerfilViewController.swift */,
+				2DC3F4AB261BF74700FE2CE0 /* AgregarCamaraViewController.swift */,
 				2D233CC0260F6D2700E05B72 /* MenuViewController.swift */,
 				2D233CBA260F247F00E05B72 /* RegistroViewController.swift */,
 				2D233CA0260EFCB900E05B72 /* ViewController.swift */,
+				2DC3F4AF261BF7C400FE2CE0 /* ListaCamarasViewController.swift */,
+				2DC3F4B2261BF81A00FE2CE0 /* MisFotosViewController.swift */,
 			);
 			path = ViewControlers;
 			sourceTree = "<group>";
@@ -228,14 +246,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DC3F4B3261BF81A00FE2CE0 /* MisFotosViewController.swift in Sources */,
 				2DA0DB532611A33000C4CAF1 /* App.swift in Sources */,
 				2D233CA1260EFCB900E05B72 /* ViewController.swift in Sources */,
 				2D233CBB260F247F00E05B72 /* RegistroViewController.swift in Sources */,
 				2D233C9D260EFCB900E05B72 /* AppDelegate.swift in Sources */,
+				2DC3F4A1261BDE4000FE2CE0 /* PerfilViewController.swift in Sources */,
+				2DC3F4B0261BF7C400FE2CE0 /* ListaCamarasViewController.swift in Sources */,
 				2D233CC1260F6D2700E05B72 /* MenuViewController.swift in Sources */,
+				2DC3F49B261AE89800FE2CE0 /* MenuTableViewController.swift in Sources */,
+				2DC3F4AC261BF74700FE2CE0 /* AgregarCamaraViewController.swift in Sources */,
 				2D233C9F260EFCB900E05B72 /* SceneDelegate.swift in Sources */,
 				2DA0DB4B2611038300C4CAF1 /* Structutrs.swift in Sources */,
 				2D233CBE260F378000E05B72 /* Service.swift in Sources */,
+				2DC3F4A5261BE6C100FE2CE0 /* MenuTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

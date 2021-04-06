@@ -19,16 +19,23 @@ class Service {
     }
     
     func registrar(endPoint: String, parameters: [String: String], completionHandler: @escaping (Bool)-> ()) {
-        AF.request(self.baseUrl + endPoint, method: .post, parameters: parameters, encoder: JSONParameterEncoder.default, headers: self.headers).response { (responseData) in
+        AF.request(self.baseUrl + endPoint, method: .post, parameters: parameters, encoder: JSONParameterEncoder.default, headers: self.headers).responseJSON { (responseData) in
 //            print(responseData.data as Any)
             switch responseData.result {
             case .success(let data):
                 do {
 //                    let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers)
-                    let json = try JSONSerialization.jsonObject(with: data!, options: [])
-                    guard let jsonRespons = (json as AnyObject) as? [String:Any] else {return}
-                    print(jsonRespons)
-                    print(json)
+//                    let json = try JSONSerialization.jsonObject(with: data!, options: [])
+//                    guard let jsonRespons = (json as AnyObject) as? [String:Any] else {return}
+                    guard let jsonResponse = responseData.value as? [String:Any] else { return }
+                    print(jsonResponse)
+                    let errors = jsonResponse.values  //["errors"] as? [Dictionary<String, Any>]
+//                    let detail = errors as? [String: Any]
+                    print(errors, "errors")
+//                    let source = errors["source"] as? [String:Any]
+//                    print(source)
+//                    let pointer = errors["pointer"] as? [String:Any]
+//                    print(pointer)
                     if responseData.response?.statusCode == 201 {
                         completionHandler(true)
                     }
@@ -65,7 +72,7 @@ class Service {
                         let type = tokenInfo?["type"] as? String ?? ""
                         let token = tokenInfo?["token"] as? String ?? ""
                         let refreshToken = tokenInfo?["refreshToken"] as? String ?? ""
-//                        print(tokenInfo, "tokenInfo")
+                        print(tokenInfo, "tokenInfo")
 //                        print(type)
 //                        print(token)
 //                        print(refreshToken)

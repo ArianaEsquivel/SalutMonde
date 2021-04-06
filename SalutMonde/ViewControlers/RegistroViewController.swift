@@ -34,12 +34,16 @@ class RegistroViewController: UIViewController {
             "email": correo,
             "password": contrasena
         ]
-        if contrasena == confirmContrasena {
+        if contrasena != "" && confirmContrasena != "" && contrasena == confirmContrasena {
             self.service.registrar(endPoint: "signup", parameters: parameters) { (isSuccess) in
                 if isSuccess {
 //                    self.performSegue(withIdentifier: "iniciar", sender: ViewController.self)
                     self.alertDefault(with: "Registrado", andWithMsg: "Ha sido registrado exitosamente", completion: true)
                 }
+                else {
+                    self.alertDefault(with: "Algo salió mal", andWithMsg: "Verifique que su user y email no haya sido registrado antes", completion: false)
+                }
+
             }
         }
         else {
