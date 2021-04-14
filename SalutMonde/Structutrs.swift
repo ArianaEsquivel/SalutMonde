@@ -29,13 +29,23 @@ struct tokenInfo : Decodable{
 }
 
 struct userInfo : Decodable{
-    var id: Int
-    var first_name: String
-    var last_name: String
-    var second_last_name: String
-    var username: String
-    var email: String
-    var created_at: String
-    var updated_at: String
-    var rol_id: Int
+    var id: Int?
+    var username: String?
+    var email: String?
+    var created_at: String?
+    var updated_at: String?
+    var rol_id: Int?
+}
+
+
+struct listCamaras : Decodable{
+    var cameras: [Camaras]?
+}
+
+struct Camaras : Decodable{
+    var id: Int?
+    var code: String?
+    var name: String?
+    var created_at: String?
+    var updated_at: String?
 }

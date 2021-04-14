@@ -54,7 +54,7 @@ class RegistroViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        self.performSegue(withIdentifier: "iniciar", sender: ViewController.self)
         if segue.identifier == "iniciar"{
-            let iniciar = segue.destination as! ViewController
+            _ = segue.destination as! ViewController
 //            iniciar.tfCorreo.text = self.tfCorreo.text
 //            iniciar.tfCorreo.text!.append(self.tfCorreo.text!)
         }

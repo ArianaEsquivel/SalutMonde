@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wGF-wT-rPX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -8,6 +8,37 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Inicio View Controller-->
+        <scene sceneID="7MJ-33-JZu">
+            <objects>
+                <viewController id="wGF-wT-rPX" customClass="InicioViewController" customModule="SalutMonde" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2aS-UH-oMq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="applelogo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="edT-lw-viJ">
+                                <rect key="frame" x="48.5" y="286.5" width="317" height="322.5"/>
+                                <color key="tintColor" white="0.9129815134" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="voX-p9-A3N"/>
+                        <color key="backgroundColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="edT-lw-viJ" firstAttribute="centerX" secondItem="2aS-UH-oMq" secondAttribute="centerX" id="JGY-RE-ASb"/>
+                            <constraint firstItem="edT-lw-viJ" firstAttribute="centerY" secondItem="2aS-UH-oMq" secondAttribute="centerY" id="OFg-5y-RUl"/>
+                            <constraint firstItem="edT-lw-viJ" firstAttribute="width" secondItem="2aS-UH-oMq" secondAttribute="width" multiplier="0.7657" id="j9y-Vy-eGp"/>
+                            <constraint firstItem="edT-lw-viJ" firstAttribute="height" secondItem="2aS-UH-oMq" secondAttribute="height" multiplier="0.361607" id="zx6-Rv-Mwf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="segueGoToInicio" id="sWQ-N1-duq"/>
+                        <segue destination="eci-at-1f5" kind="show" identifier="segueGoMenu" id="3dV-mf-ScT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HtI-6R-sOh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-684.05797101449275" y="93.75"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -105,7 +136,6 @@
                             <constraint firstItem="euc-kW-lcv" firstAttribute="width" secondItem="Tqd-Ed-6eZ" secondAttribute="width" multiplier="3:5" id="zv7-Cf-agx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="FHa-zd-wS6"/>
                     <connections>
                         <outlet property="tfContrasena" destination="Tqd-Ed-6eZ" id="0aD-9L-TTh"/>
                         <outlet property="tfCorreo" destination="hBq-Ad-OyI" id="z8n-mL-xKk"/>
@@ -130,23 +160,75 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jde-TG-uwv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12" y="779"/>
+            <point key="canvasLocation" x="-684" y="779"/>
         </scene>
         <!--Lista de cámaras-->
         <scene sceneID="tlV-HA-T1v">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="U1w-mQ-2Su" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="ghH-Kc-XxE" customClass="ListaCamarasViewController" customModule="SalutMonde" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5wd-oO-qJI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="70m-kL-a5n">
+                                <rect key="frame" x="0.0" y="56" width="414" height="752"/>
+                                <color key="backgroundColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="separatorColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celdaListaCamaras" rowHeight="69" id="TQN-Zc-OH9" customClass="ListaCamarasTableViewCell" customModule="SalutMonde" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="69"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TQN-Zc-OH9" id="tCY-1W-qo3">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="69"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="label" text="Celda lista camaras" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Dq-w0-aUo">
+                                                    <rect key="frame" x="20" y="22.5" width="374" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" systemColor="systemBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstItem="5Dq-w0-aUo" firstAttribute="centerY" secondItem="tCY-1W-qo3" secondAttribute="centerY" id="TMn-lu-waF"/>
+                                                <constraint firstItem="5Dq-w0-aUo" firstAttribute="leading" secondItem="tCY-1W-qo3" secondAttribute="leadingMargin" id="Y6R-Gd-eK5"/>
+                                                <constraint firstItem="5Dq-w0-aUo" firstAttribute="centerX" secondItem="tCY-1W-qo3" secondAttribute="centerX" id="Yog-Dh-BqH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="lblNombre" destination="5Dq-w0-aUo" id="Khc-YM-vXi"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="9uC-rh-HAC"/>
                         <color key="backgroundColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="70m-kL-a5n" firstAttribute="top" secondItem="9uC-rh-HAC" secondAttribute="top" id="35T-ez-vMO"/>
+                            <constraint firstItem="70m-kL-a5n" firstAttribute="leading" secondItem="9uC-rh-HAC" secondAttribute="leading" id="JQj-7o-pVX"/>
+                            <constraint firstItem="9uC-rh-HAC" firstAttribute="bottom" secondItem="70m-kL-a5n" secondAttribute="bottom" id="PGW-vo-bAF"/>
+                            <constraint firstItem="9uC-rh-HAC" firstAttribute="trailing" secondItem="70m-kL-a5n" secondAttribute="trailing" id="lWN-Jg-A4h"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Lista de cámaras" id="gHD-b4-3RO"/>
+                    <navigationItem key="navigationItem" title="Lista de cámaras" id="gHD-b4-3RO">
+                        <barButtonItem key="rightBarButtonItem" title="Añadir" id="3Ee-zS-Mmp">
+                            <connections>
+                                <action selector="btnAnadir:" destination="ghH-Kc-XxE" id="wan-s7-u2h"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tblListaCamaras" destination="70m-kL-a5n" id="P1W-ro-e0d"/>
+                        <segue destination="dU9-z2-gnr" kind="show" identifier="showAgregardList" id="nXi-UO-7Ci"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U1w-mQ-2Su" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="790" y="779"/>
+            <point key="canvasLocation" x="35" y="779"/>
         </scene>
         <!--Mis fotos-->
         <scene sceneID="XGA-gk-cF2">
@@ -162,7 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="smd-l1-aOF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1519" y="779"/>
+            <point key="canvasLocation" x="790" y="779"/>
         </scene>
         <!--Registro View Controller-->
         <scene sceneID="V9S-QN-nh5">
@@ -311,7 +393,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="label" text="Celda menú" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvu-SP-85U">
-                                            <rect key="frame" x="20" y="22.5" width="105" height="24"/>
+                                            <rect key="frame" x="20" y="22.5" width="374" height="24"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <color key="textColor" systemColor="systemBackgroundColor"/>
                                             <nil key="highlightedColor"/>
@@ -320,6 +402,7 @@
                                     <constraints>
                                         <constraint firstItem="vvu-SP-85U" firstAttribute="centerY" secondItem="dya-cb-fBb" secondAttribute="centerY" id="5h5-pM-Mbm"/>
                                         <constraint firstItem="vvu-SP-85U" firstAttribute="leading" secondItem="dya-cb-fBb" secondAttribute="leadingMargin" id="Hdc-O0-NFJ"/>
+                                        <constraint firstItem="vvu-SP-85U" firstAttribute="centerX" secondItem="dya-cb-fBb" secondAttribute="centerX" id="xVq-ps-ebP"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -333,22 +416,29 @@
                             <outlet property="delegate" destination="vJM-gN-iuc" id="tVj-QB-euM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Menú" id="MV8-70-0cZ"/>
+                    <navigationItem key="navigationItem" title="Menú" id="MV8-70-0cZ">
+                        <barButtonItem key="leftBarButtonItem" title="Salir" id="77z-Oh-pvU">
+                            <connections>
+                                <action selector="btnSalir:" destination="vJM-gN-iuc" id="hV1-aB-ise"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="efg-Nl-sgE" kind="show" identifier="showPerfil" id="8Ve-xm-XEG"/>
                         <segue destination="dU9-z2-gnr" kind="show" identifier="showAgregarCamara" id="hn2-FY-0yB"/>
                         <segue destination="ghH-Kc-XxE" kind="show" identifier="showListaCamaras" id="Xbw-ka-ZPL"/>
                         <segue destination="bgy-Ip-J0p" kind="show" identifier="showMisFotos" id="t73-TV-2dt"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="segueSalir" id="SYZ-7A-tEa"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nbs-bf-yKX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2330.434782608696" y="93.75"/>
+            <point key="canvasLocation" x="2245" y="94"/>
         </scene>
         <!--Perfil-->
         <scene sceneID="Sj4-zF-9JD">
             <objects>
-                <viewController id="efg-Nl-sgE" customClass="PerfilViewController" customModule="SalutMonde" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overFullScreen" id="efg-Nl-sgE" customClass="PerfilViewController" customModule="SalutMonde" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hU3-Ay-3oH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -415,12 +505,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="lblCorreo" destination="zCO-wB-Q7x" id="Ud7-Im-6DK"/>
+                        <outlet property="lblUsuario" destination="fPL-Ro-PSZ" id="vgZ-iv-LBr"/>
                         <segue destination="y5z-Ez-nnz" kind="show" identifier="showEditar" id="7az-pF-pUr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LmL-p9-ddk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3150.7246376811595" y="93.75"/>
+            <point key="canvasLocation" x="1519" y="779"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="99n-eG-BwN">
@@ -442,7 +534,7 @@
         <!--Editar erfil-->
         <scene sceneID="EhM-GB-YMy">
             <objects>
-                <viewController id="y5z-Ez-nnz" customClass="PerfilViewController" customModule="SalutMonde" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overFullScreen" id="y5z-Ez-nnz" customClass="EditarPerfilViewController" customModule="SalutMonde" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A1B-30-iCJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -480,6 +572,7 @@
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <state key="normal" title="Guardar"/>
                                 <connections>
+                                    <action selector="guardar:" destination="y5z-Ez-nnz" eventType="touchUpInside" id="mZG-3K-rPN"/>
                                     <action selector="iniciarSesion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R2K-Tk-Nt7"/>
                                 </connections>
                             </button>
@@ -514,16 +607,30 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Editar erfil" id="mUm-qi-6bc"/>
+                    <connections>
+                        <outlet property="btnGuardar" destination="BB0-8b-eS4" id="oE4-eh-rHC"/>
+                        <outlet property="tfCorreo" destination="vbs-RD-vAD" id="7uX-kT-GWN"/>
+                        <outlet property="tfUsuario" destination="z0h-5I-sE4" id="tAf-K5-aXD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xfi-XZ-wzm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2328.985507246377" y="778.79464285714278"/>
+            <point key="canvasLocation" x="2243" y="779"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="FO0-bi-YDD"/>
+        <segue reference="hn2-FY-0yB"/>
+        <segue reference="PFg-TN-VWd"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="applelogo" catalog="system" width="103" height="128"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -46,8 +46,15 @@ class MenuTableViewController: UITableViewController {
         performSegue(withIdentifier: seguesMenu[indexPath.row], sender: self)
         print(indexPath.row)
     }
-
-
+    
+    
+    @IBAction func btnSalir(_ sender: Any) {
+        App.shared.defaults.setValue("", forKey: "Token")
+        App.shared.defaults.setValue("", forKey: "Typee")
+        App.shared.defaults.setValue("", forKey: "RefreshToken")
+        self.performSegue(withIdentifier: "segueSalir", sender: self)
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

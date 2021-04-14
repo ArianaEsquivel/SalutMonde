@@ -11,18 +11,26 @@ import Alamofire
 class Service {
     fileprivate var baseUrl = ""
     var headers : HTTPHeaders!
+    var headersToken : HTTPHeaders!
+    typealias camarasCallBack = (_ camaras: listCamaras?, _ status: Bool, _ message: String) -> Void
+    var callBack: camarasCallBack?
+    typealias perfilCallBack = (_ user: userInfo?, _ status: Bool, _ message: String) -> Void
+    var pCallBack: perfilCallBack?
     
     init(baseUrl: String) {
         self.baseUrl = baseUrl
         self.headers = [
             .contentType("application/json")]
+//        self.headersToken = [
+//            .contentType("application/json"),
+//            .authorization(bearerToken: App.shared.Token)]
     }
     
     func registrar(endPoint: String, parameters: [String: String], completionHandler: @escaping (Bool)-> ()) {
         AF.request(self.baseUrl + endPoint, method: .post, parameters: parameters, encoder: JSONParameterEncoder.default, headers: self.headers).responseJSON { (responseData) in
 //            print(responseData.data as Any)
             switch responseData.result {
-            case .success(let data):
+            case .success(_): //poner let data
                 do {
 //                    let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers)
 //                    let json = try JSONSerialization.jsonObject(with: data!, options: [])
@@ -42,9 +50,6 @@ class Service {
                     else {
                         completionHandler(false)
                     }
-                } catch {
-                    print(error.localizedDescription)
-                    completionHandler(false)
                 }
             case .failure(let err):
                 print(err.localizedDescription)
@@ -72,15 +77,15 @@ class Service {
                         let type = tokenInfo?["type"] as? String ?? ""
                         let token = tokenInfo?["token"] as? String ?? ""
                         let refreshToken = tokenInfo?["refreshToken"] as? String ?? ""
-                        print(tokenInfo, "tokenInfo")
+                        print("tokenInfo")
 //                        print(type)
 //                        print(token)
 //                        print(refreshToken)
                         if token != "" {
-                            App.shared.Token = token
-                            App.shared.Typee = type
-                            App.shared.RefreshToken = refreshToken
-                            print(App.shared.Token ?? "")
+                            App.shared.defaults.setValue(token, forKey: "Token")
+                            App.shared.defaults.setValue(type, forKey: "Typee")
+                            App.shared.defaults.setValue(refreshToken, forKey: "RefreshToken")
+                            print(App.shared.defaults.object(forKey: "Token") as! String)
                         }
                         completionHandler(true)
                     }
@@ -94,6 +99,66 @@ class Service {
 //                }
             case .failure(let err):
                 print(err.localizedDescription)
+                completionHandler(false)
+            }
+        }
+    }
+    
+    func getListaCamara (endPoint: String){
+        AF.request(self.baseUrl + endPoint, method: .get, parameters: nil, encoding: URLEncoding.default, headers: [.contentType("application/json"), .authorization(bearerToken: App.shared.defaults.object(forKey: "Token") as! String)], interceptor: nil).response {
+            (responseData) in
+                        guard let data = responseData.data else { return }
+                        do {
+                            let camaras = try JSONDecoder().decode(listCamaras.self, from: data)
+//                            print(camaras.cameras)
+                            self.callBack?(camaras, true, "")
+                        } catch {
+                            print(error)
+                            self.callBack?(nil, false, error.localizedDescription)
+                        }
+
+                    }
+    }
+    
+    func completionHandler(callBack: @escaping camarasCallBack){
+        self.callBack = callBack
+    }
+    
+    func getPerfil (){
+        AF.request(self.baseUrl, method: .get, parameters: nil, encoding: URLEncoding.default, headers: [.contentType("application/json"), .authorization(bearerToken: App.shared.defaults.object(forKey: "Token") as! String)], interceptor: nil).response {
+            (responseData) in
+                        guard let data = responseData.data else { return }
+                        do {
+                            let perfil = try JSONDecoder().decode(userInfo.self, from: data)
+                            print(perfil)
+                            self.pCallBack?(perfil, true, "")
+                        } catch {
+                            print(error)
+                            self.pCallBack?(nil, false, error.localizedDescription)
+                        }
+
+                    }
+    }
+    
+    func completionHandlerP(callBack: @escaping perfilCallBack){
+        self.pCallBack = callBack
+    }
+    
+    func editPerfil(endPoint: String, parameters: [String: String], completionHandler: @escaping (Bool)-> () ) {
+        AF.request(self.baseUrl + endPoint, method: .put, parameters: parameters, encoder: JSONParameterEncoder.default, headers: [.contentType("application/json"), .authorization(bearerToken: App.shared.defaults.object(forKey: "Token") as! String)]).responseJSON { (responseData) in
+            switch responseData.result {
+            case .success(let data):
+                print(data)
+                if responseData.response?.statusCode == 200 {
+                    guard let jsonResponse = responseData.value as? [String:Any] else { return }
+                    print(jsonResponse, "jsonResponse")
+                    completionHandler(true)
+                }
+                else {
+                    completionHandler(false)
+                }
+            case .failure(let err):
+                print("erroooor", err.localizedDescription)
                 completionHandler(false)
             }
         }
