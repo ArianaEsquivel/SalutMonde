@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tfCorreo.text = ""
-        self.service = Service(baseUrl: "http://127.0.0.1:3333/v1/auth/")
+        self.service = Service()
     }
     
     @IBAction func iniciarSesion(_ sender: Any) {
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
             "password": contrasena
         ]
         
-        self.service.login(endPoint: "login", parameters: parameters) { (isSuccess) in
+        self.service.login(endPoint: "auth/login", parameters: parameters) { (isSuccess) in
             if isSuccess == true {
 //                self.performSegue(withIdentifier: "logearse", sender: MenuViewController.self)
 //                self.alertDefault(with: "Loggeado", andWithMsg: "Ha ingresado correctamente", completion: false)
@@ -42,6 +42,11 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
     self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
-
+    
+    
+    @IBAction func ocultarTeclado(_ sender: Any) {
+        self.view.endEditing(true)
+    }
+    
 }
 

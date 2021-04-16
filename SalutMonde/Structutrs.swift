@@ -43,9 +43,45 @@ struct listCamaras : Decodable{
 }
 
 struct Camaras : Decodable{
-    var id: Int?
+    var id: String?
     var code: String?
+    var ip: String?
     var name: String?
+    var user_id: String?
     var created_at: String?
     var updated_at: String?
 }
+
+struct Fotos : Decodable{
+    var id: String?
+    var route: String?
+    var obj_type: String?
+    var distance: String?
+    var date_photo: String?
+    var camera_id: String?
+    var created_at: String?
+    var updated_at: String?
+}
+
+struct listDatCam : Decodable{
+    var id: String?
+    var code: String?
+    var ip: String?
+    var name: String?
+    var user_id: String?
+    var created_at: String?
+    var updated_at: String?
+    var images : [Fotos]?
+    var values : [Values]?
+}
+
+struct Values : Decodable{
+    var id: String?
+    var temperature: String?
+    var humidity: String?
+    var date_value: String?
+    var camera_id: String?
+    var created_at: String?
+    var updated_at: String?
+}
+

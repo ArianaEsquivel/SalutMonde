@@ -21,7 +21,7 @@ class RegistroViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.service = Service(baseUrl: "http://127.0.0.1:3333/v1/auth/")
+        self.service = Service()
     }
     
     @IBAction func registrar(_ sender: Any) {
@@ -35,7 +35,7 @@ class RegistroViewController: UIViewController {
             "password": contrasena
         ]
         if contrasena != "" && confirmContrasena != "" && contrasena == confirmContrasena {
-            self.service.registrar(endPoint: "signup", parameters: parameters) { (isSuccess) in
+            self.service.registrar(endPoint: "auth/signup", parameters: parameters) { (isSuccess) in
                 if isSuccess {
 //                    self.performSegue(withIdentifier: "iniciar", sender: ViewController.self)
                     self.alertDefault(with: "Registrado", andWithMsg: "Ha sido registrado exitosamente", completion: true)
@@ -63,6 +63,11 @@ class RegistroViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
     }
+    
+    @IBAction func ocultarTeclado(_ sender: Any) {
+        self.view.endEditing(true)
+    }
+    
 }
 extension UIViewController{
     func alertDefault(with title:String, andWithMsg description:String, completion: Bool){

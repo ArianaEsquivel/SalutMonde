@@ -18,8 +18,8 @@ class PerfilViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.service = Service(baseUrl: "http://127.0.0.1:3333/v1/api/profile/")
-        self.service.getPerfil()
+        self.service = Service()
+        self.service.getPerfil(endPoint: "api/profile/")
         self.service.completionHandlerP { (user, status, message) in
             if status {
                 guard let _user = user else {return}

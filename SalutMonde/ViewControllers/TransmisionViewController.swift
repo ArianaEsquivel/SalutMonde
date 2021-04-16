@@ -1,18 +1,20 @@
 //
-//  AgregarCamaraViewController.swift
+//  TransmisionViewController.swift
 //  SalutMonde
 //
-//  Created by Ariana Esquivel on 05/04/21.
+//  Created by Ariana Esquivel on 15/04/21.
 //
 
 import UIKit
 
-class AgregarCamaraViewController: UIViewController {
+class TransmisionViewController: UIViewController {
+    var nameImage : String!
+    var ipCam : String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.navigationItem.title = self.nameImage
     }
     
 

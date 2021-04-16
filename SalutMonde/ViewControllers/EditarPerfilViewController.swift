@@ -21,8 +21,8 @@ class EditarPerfilViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.service = Service(baseUrl: "http://127.0.0.1:3333/v1/api/profile/")
-        self.service.getPerfil()
+        self.service = Service()
+        self.service.getPerfil(endPoint: "api/profile/")
         self.service.completionHandlerP { (user, status, message) in
             if status {
                 guard let _user = user else {return}
@@ -40,15 +40,20 @@ class EditarPerfilViewController: UIViewController {
             "email": correo
         ]
         
-        self.service.editPerfil(endPoint: "edit", parameters: parameters) { (isSuccess) in
+        self.service.editPerfil(endPoint: "api/profile/edit", parameters: parameters) { (isSuccess) in
             if isSuccess == true {
-                self.navigationController?.popViewController(animated: true)
-//                self.alertDefault(with: "Perfil editado", andWithMsg: "Cambios guardados con exito", completion: false)
+                self.navigationController?.popViewController(animated: true)//?.navigationController?.viewWillAppear(true)
+                self.navigationController?.navigationController?.popViewController(animated: true)
             }
             else {
                 self.alertDefault(with: "Campos no válidos", andWithMsg: "Verifique sus datos no sean igual que antes de editarlo", completion: false)
             }
         }
+    }
+    
+    
+    @IBAction func ocultarTeclado(_ sender: Any) {
+        self.view.endEditing(true)
     }
     
 }

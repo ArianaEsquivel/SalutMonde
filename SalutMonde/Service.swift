@@ -14,11 +14,13 @@ class Service {
     var headersToken : HTTPHeaders!
     typealias camarasCallBack = (_ camaras: listCamaras?, _ status: Bool, _ message: String) -> Void
     var callBack: camarasCallBack?
+    typealias datCamCallBack = (_ datCam: listDatCam?, _ status: Bool, _ message: String) -> Void
+    var callBackDC: datCamCallBack?
     typealias perfilCallBack = (_ user: userInfo?, _ status: Bool, _ message: String) -> Void
     var pCallBack: perfilCallBack?
     
-    init(baseUrl: String) {
-        self.baseUrl = baseUrl
+    init() {
+        self.baseUrl = "http://127.0.0.1:3333/v1/"
         self.headers = [
             .contentType("application/json")]
 //        self.headersToken = [
@@ -124,8 +126,8 @@ class Service {
         self.callBack = callBack
     }
     
-    func getPerfil (){
-        AF.request(self.baseUrl, method: .get, parameters: nil, encoding: URLEncoding.default, headers: [.contentType("application/json"), .authorization(bearerToken: App.shared.defaults.object(forKey: "Token") as! String)], interceptor: nil).response {
+    func getPerfil (endPoint: String){
+        AF.request(self.baseUrl + endPoint, method: .get, parameters: nil, encoding: URLEncoding.default, headers: [.contentType("application/json"), .authorization(bearerToken: App.shared.defaults.object(forKey: "Token") as! String)], interceptor: nil).response {
             (responseData) in
                         guard let data = responseData.data else { return }
                         do {
@@ -163,4 +165,41 @@ class Service {
             }
         }
     }
+    
+    func getListDatCam (endPoint: String){
+        AF.request(self.baseUrl + endPoint, method: .get, parameters: nil, encoding: URLEncoding.default, headers: [.contentType("application/json"), .authorization(bearerToken: App.shared.defaults.object(forKey: "Token") as! String)], interceptor: nil).response {
+            (responseData) in
+                        guard let data = responseData.data else { return }
+                        do {
+                            let datCam = try JSONDecoder().decode(listDatCam.self, from: data)
+//                            print(camaras.cameras)
+                            self.callBackDC?(datCam, true, "")
+                        } catch {
+                            print(error)
+                            self.callBackDC?(nil, false, error.localizedDescription)
+                        }
+
+                    }
+    }
+    
+    func completionHandlerDC(callBack: @escaping datCamCallBack){
+        self.callBackDC = callBack
+    }
+    
+    func getData(from endpoint: String, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+        let url = URL(string: "\(self.baseUrl)api/repo/img/\(endpoint ?? "")")!
+        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
+    }
+    
+    func downloadImage(from endpoint: String, img: UIImageView) {
+        getData(from: endpoint ) { data, response, error in
+            guard let data = data, error == nil else { return }
+            DispatchQueue.main.async() { [weak self] in
+                img.image = UIImage(data: data)
+            }
+        }
+    }
+    
 }
+
+
