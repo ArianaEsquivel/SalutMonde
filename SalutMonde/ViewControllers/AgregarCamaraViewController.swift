@@ -12,6 +12,7 @@ class AgregarCamaraViewController: UIViewController, AVCaptureMetadataOutputObje
 
     var captureSession:AVCaptureSession!
     var previewLayer:AVCaptureVideoPreviewLayer!
+    var service:Service!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,7 @@ class AgregarCamaraViewController: UIViewController, AVCaptureMetadataOutputObje
         captureSession = AVCaptureSession()
         guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else { return }
         let videoInput: AVCaptureDeviceInput
+        self.service = Service()
         
         do {
             videoInput = try AVCaptureDeviceInput(device: videoCaptureDevice)
@@ -79,25 +81,36 @@ class AgregarCamaraViewController: UIViewController, AVCaptureMetadataOutputObje
             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
             foundText(stringValue)
         }
-//        dismiss(animated: true)
     }
     
     func foundText (_ textFromQR:String){
         print(textFromQR)
         guard let data = textFromQR.data(using: .utf8) else { return }
-        let decoder = JSONDecoder()
-        guard let device = try? decoder.decode(Device.self, from: data) else { return }
-        print(device.token)
-        
-        let ac = UIAlertController(title: "Device token", message: "\(device.token)", preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
-            self.navigationController?.popViewController(animated: true)
-        }))
-        present(ac, animated: true)
-        
-        
-//        captureSession = nil
-        
+        print(data)
+        let parameters: [String: String] = [
+            "code": textFromQR,
+            "na":"jeje"
+        ]
+
+        self.service.regCam(endPoint: "api/camera/create", parameters: parameters) { (isSuccess) in
+            if isSuccess {
+//                self.alertDefault(with: "Cámara registrada", andWithMsg: "La cámara se vinculó correctamente a su cuenta", completion: true)
+                let ac = UIAlertController(title: "Cámara registrada", message: "La cámara se vinculó correctamente a su cuenta", preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                    self.navigationController?.popViewController(animated: true)
+                }))
+                self.present(ac, animated: true)
+            }
+            else {
+//                self.alertDefault(with: "Algo salió mal", andWithMsg: "Algo salió mal con la vinculación de la cámara", completion: false)
+                
+                let ac = UIAlertController(title: "Error de vinculación", message: "Algo salió mal con la vinculación de la cámara", preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                    self.captureSession.startRunning()
+                }))
+                self.present(ac, animated: true)
+            }
+        }
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask{

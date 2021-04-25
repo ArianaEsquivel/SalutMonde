@@ -19,10 +19,12 @@
 		2D233CC1260F6D2700E05B72 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D233CC0260F6D2700E05B72 /* MenuViewController.swift */; };
 		2D3F5293262785BB00CD8E9C /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3F5292262785BB00CD8E9C /* Device.swift */; };
 		2D3F529626278D3600CD8E9C /* FotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3F529526278D3600CD8E9C /* FotosCollectionViewCell.swift */; };
+		2D79BBED2629FE1A0050FB74 /* noConectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D79BBEC2629FE1A0050FB74 /* noConectionView.swift */; };
 		2D7D49922628269F00486D62 /* CamarasMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D49912628269F00486D62 /* CamarasMenuTableViewCell.swift */; };
 		2D7D4995262826D800486D62 /* CamarasMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D4994262826D800486D62 /* CamarasMenuViewController.swift */; };
 		2DA0DB4B2611038300C4CAF1 /* Structutrs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA0DB4A2611038200C4CAF1 /* Structutrs.swift */; };
 		2DA0DB532611A33000C4CAF1 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA0DB522611A33000C4CAF1 /* App.swift */; };
+		2DB3317126336BA1001203CC /* VideoIm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB3317026336BA1001203CC /* VideoIm.swift */; };
 		2DC3F49B261AE89800FE2CE0 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3F49A261AE89800FE2CE0 /* MenuTableViewController.swift */; };
 		2DC3F4A1261BDE4000FE2CE0 /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3F4A0261BDE4000FE2CE0 /* PerfilViewController.swift */; };
 		2DC3F4A5261BE6C100FE2CE0 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3F4A4261BE6C100FE2CE0 /* MenuTableViewCell.swift */; };
@@ -54,10 +56,12 @@
 		2D233CC0260F6D2700E05B72 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		2D3F5292262785BB00CD8E9C /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		2D3F529526278D3600CD8E9C /* FotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotosCollectionViewCell.swift; sourceTree = "<group>"; };
+		2D79BBEC2629FE1A0050FB74 /* noConectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noConectionView.swift; sourceTree = "<group>"; };
 		2D7D49912628269F00486D62 /* CamarasMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamarasMenuTableViewCell.swift; sourceTree = "<group>"; };
 		2D7D4994262826D800486D62 /* CamarasMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamarasMenuViewController.swift; sourceTree = "<group>"; };
 		2DA0DB4A2611038200C4CAF1 /* Structutrs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structutrs.swift; sourceTree = "<group>"; };
 		2DA0DB522611A33000C4CAF1 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		2DB3317026336BA1001203CC /* VideoIm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoIm.swift; sourceTree = "<group>"; };
 		2DC3F49A261AE89800FE2CE0 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		2DC3F4A0261BDE4000FE2CE0 /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
 		2DC3F4A4261BE6C100FE2CE0 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 				2DA0DB4A2611038200C4CAF1 /* Structutrs.swift */,
 				2DA0DB522611A33000C4CAF1 /* App.swift */,
 				2D3F5292262785BB00CD8E9C /* Device.swift */,
+				2D79BBEC2629FE1A0050FB74 /* noConectionView.swift */,
+				2DB3317026336BA1001203CC /* VideoIm.swift */,
 			);
 			path = SalutMonde;
 			sourceTree = "<group>";
@@ -307,11 +313,13 @@
 				2DC3F4B0261BF7C400FE2CE0 /* ListaCamarasViewController.swift in Sources */,
 				2DE495242628DE5B00E10B01 /* TransmisionViewController.swift in Sources */,
 				2D233CC1260F6D2700E05B72 /* MenuViewController.swift in Sources */,
+				2D79BBED2629FE1A0050FB74 /* noConectionView.swift in Sources */,
 				2DF865E426297FF300A3863B /* VerFotoViewController.swift in Sources */,
 				2DC3F49B261AE89800FE2CE0 /* MenuTableViewController.swift in Sources */,
 				2DC50E142626DE4900D2D1F6 /* EditarPerfilViewController.swift in Sources */,
 				2DC3F4AC261BF74700FE2CE0 /* AgregarCamaraViewController.swift in Sources */,
 				2D233C9F260EFCB900E05B72 /* SceneDelegate.swift in Sources */,
+				2DB3317126336BA1001203CC /* VideoIm.swift in Sources */,
 				2DA0DB4B2611038300C4CAF1 /* Structutrs.swift in Sources */,
 				2D7D4995262826D800486D62 /* CamarasMenuViewController.swift in Sources */,
 				2D233CBE260F378000E05B72 /* Service.swift in Sources */,

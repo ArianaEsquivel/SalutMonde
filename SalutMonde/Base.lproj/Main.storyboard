@@ -46,48 +46,48 @@
             <objects>
                 <viewController modalPresentationStyle="overFullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="SalutMonde" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oNr-go-b6b">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <connections>
                                     <action selector="ocultarTeclado:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xnx-Hb-GkC"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inicio de sesión" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K02-nH-i0U">
-                                <rect key="frame" x="79.5" y="62" width="255" height="44.5"/>
+                                <rect key="frame" x="79.5" y="66" width="255" height="47"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0KA-R0-901">
-                                <rect key="frame" x="109" y="159" width="196" height="187"/>
+                                <rect key="frame" x="109" y="169.5" width="196" height="199"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo electrónico" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phD-P5-8IG">
-                                <rect key="frame" x="52" y="387.5" width="310.5" height="25"/>
+                                <rect key="frame" x="52" y="412" width="310.5" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hBq-Ad-OyI">
-                                <rect key="frame" x="52" y="426" width="310.5" height="32"/>
+                                <rect key="frame" x="52" y="453.5" width="310.5" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olO-O1-Omi">
-                                <rect key="frame" x="52" y="471.5" width="310.5" height="25.5"/>
+                                <rect key="frame" x="52" y="501.5" width="310.5" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tqd-Ed-6eZ">
-                                <rect key="frame" x="52" y="510.5" width="310.5" height="31.5"/>
+                                <rect key="frame" x="52" y="543" width="310.5" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="euc-kW-lcv">
-                                <rect key="frame" x="114" y="607.5" width="186" height="48"/>
+                                <rect key="frame" x="114" y="646.5" width="186" height="51"/>
                                 <color key="backgroundColor" red="0.8411284685" green="0.2161995769" blue="0.39215913409999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
@@ -97,7 +97,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VoL-MN-ERl">
-                                <rect key="frame" x="161.5" y="699.5" width="91" height="32"/>
+                                <rect key="frame" x="161.5" y="744.5" width="91" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Registrarse">
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
@@ -312,10 +312,24 @@
                     <view key="view" contentMode="scaleToFill" id="N7R-YH-pdM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O4X-3r-v3c">
+                                <rect key="frame" x="0.0" y="56" width="414" height="752"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="9Q6-9Y-YMd"/>
                         <color key="backgroundColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="9Q6-9Y-YMd" firstAttribute="bottom" secondItem="O4X-3r-v3c" secondAttribute="bottom" id="9pC-TA-g8f"/>
+                            <constraint firstItem="O4X-3r-v3c" firstAttribute="top" secondItem="9Q6-9Y-YMd" secondAttribute="top" id="EYz-6f-178"/>
+                            <constraint firstItem="O4X-3r-v3c" firstAttribute="leading" secondItem="9Q6-9Y-YMd" secondAttribute="leading" id="Svc-PB-pOB"/>
+                            <constraint firstItem="9Q6-9Y-YMd" firstAttribute="trailing" secondItem="O4X-3r-v3c" secondAttribute="trailing" id="pHl-yL-WBk"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Transmisión" id="G8z-YA-TZH"/>
+                    <connections>
+                        <outlet property="ivTransmision" destination="O4X-3r-v3c" id="e8P-DZ-o4T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TCO-bt-abK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -587,6 +601,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8p9-LL-hGd">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <connections>
+                                    <action selector="ocultarTeclado:" destination="KLM-Cu-9jt" eventType="touchUpInside" id="XF2-xK-sWT"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registrarse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hz-kO-WRv">
                                 <rect key="frame" x="115.5" y="62" width="183.5" height="44.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
@@ -645,12 +665,6 @@
                                 <state key="normal" title="Registrarse"/>
                                 <connections>
                                     <action selector="registrar:" destination="KLM-Cu-9jt" eventType="touchUpInside" id="rbp-3i-ehe"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8p9-LL-hGd">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                                <connections>
-                                    <action selector="ocultarTeclado:" destination="KLM-Cu-9jt" eventType="touchUpInside" id="XF2-xK-sWT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -971,9 +985,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3dV-mf-ScT"/>
+        <segue reference="FO0-bi-YDD"/>
         <segue reference="nXi-UO-7Ci"/>
-        <segue reference="SYZ-7A-tEa"/>
+        <segue reference="PFg-TN-VWd"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="applelogo" catalog="system" width="103" height="128"/>

@@ -39,22 +39,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D0E784B1-A926-49A3-B2C8-398D07C8C39D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SalutMonde/Service.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "login(endPoint:parameters:completionHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "A75CE3C1-4730-4FD1-812C-616E21EB05CD"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -151,70 +135,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4F0B3D92-BF82-4D0B-84BA-41317299B02B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SalutMonde/Service.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "login(endPoint:parameters:completionHandler:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "4F0B3D92-BF82-4D0B-84BA-41317299B02B - fbc0567b122252b8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in SalutMonde.Service.login(endPoint: Swift.String, parameters: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, completionHandler: (Swift.Bool) -&gt; ()) -&gt; ()"
-                  moduleName = "SalutMonde"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/arianaesquivel/Macs/SalutMonde/SalutMonde/Service.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "360">
-               </Location>
-               <Location
-                  uuid = "4F0B3D92-BF82-4D0B-84BA-41317299B02B - fbc0567b122252b8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in SalutMonde.Service.login(endPoint: Swift.String, parameters: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, completionHandler: (Swift.Bool) -&gt; ()) -&gt; ()"
-                  moduleName = "SalutMonde"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/arianaesquivel/Macs/SalutMonde/SalutMonde/Service.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "398">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "AC962220-9556-46BA-B304-74C74F65D27D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SalutMonde/Service.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "login(endPoint:parameters:completionHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "628639F3-86BB-4D86-BAFF-34D3EAB744D7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -241,70 +161,6 @@
             startingLineNumber = "40"
             endingLineNumber = "40"
             landmarkName = "registrar(endPoint:parameters:completionHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "030FFCFA-4CAD-42FE-BDFD-0E96CDA1E231"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SalutMonde/Service.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "login(endPoint:parameters:completionHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "37C92CEC-A52E-4918-B6BD-15D6A2F63E37"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SalutMonde/Service.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "login(endPoint:parameters:completionHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DC990626-514E-4771-A92B-C7B472C5184D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SalutMonde/Service.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "login(endPoint:parameters:completionHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5780A539-0187-4ABD-BD65-1B9016F658A4"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SalutMonde/Service.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "login(endPoint:parameters:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -343,48 +199,160 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2ED60AAD-EC64-4F64-A9E5-F231700165BB"
-            shouldBeEnabled = "Yes"
+            uuid = "05720F9E-FE4D-47FF-9FCE-46D75EA3F65C"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SalutMonde/Service.swift"
+            filePath = "SalutMonde/ViewControllers/AgregarCamaraViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "203"
-            endingLineNumber = "203"
-            landmarkName = "Service"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9EFD0B94-C296-4BB1-9459-72E8CB9FAC75"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SalutMonde/Service.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
-            landmarkName = "getListaCamara(endPoint:)"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "foundText(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4AADE454-EEB4-4939-BA35-80D91BDAAE3A"
+            uuid = "57CACF7C-8ED3-49C6-B18E-ABDDDB18C92C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SalutMonde/ViewControllers/AgregarCamaraViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "foundText(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3D5279FC-267A-4944-AE35-4C28517D9F3D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SalutMonde/ViewControllers/AgregarCamaraViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "foundText(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3D5279FC-267A-4944-AE35-4C28517D9F3D - f27bed3bd3304164"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SalutMonde.AgregarCamaraViewController.foundText(Swift.String) -&gt; ()"
+                  moduleName = "SalutMonde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arianaesquivel/Macs/SalutMonde/SalutMonde/ViewControllers/AgregarCamaraViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "1188">
+               </Location>
+               <Location
+                  uuid = "3D5279FC-267A-4944-AE35-4C28517D9F3D - e688bafd8be75a56"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in SalutMonde.AgregarCamaraViewController.foundText(Swift.String) -&gt; ()"
+                  moduleName = "SalutMonde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arianaesquivel/Macs/SalutMonde/SalutMonde/ViewControllers/AgregarCamaraViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "108">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "585616D0-9603-4487-8623-0040F1EE9AD0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SalutMonde/ViewControllers/AgregarCamaraViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "foundText(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F9A57290-8B70-4B67-95AF-ADB8DC679F5C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SalutMonde/Service.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
-            landmarkName = "getListaCamara(endPoint:)"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
+            landmarkName = "regCam(endPoint:parameters:completionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F9A57290-8B70-4B67-95AF-ADB8DC679F5C - 9506a4e500a3e5f8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SalutMonde.Service.regCam(endPoint: Swift.String, parameters: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, completionHandler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "SalutMonde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arianaesquivel/Macs/SalutMonde/SalutMonde/Service.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "207"
+                  endingLineNumber = "207"
+                  offsetFromSymbolStart = "616">
+               </Location>
+               <Location
+                  uuid = "F9A57290-8B70-4B67-95AF-ADB8DC679F5C - 937b0930cf60a085"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in SalutMonde.Service.regCam(endPoint: Swift.String, parameters: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, completionHandler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "SalutMonde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arianaesquivel/Macs/SalutMonde/SalutMonde/Service.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "208"
+                  endingLineNumber = "208"
+                  offsetFromSymbolStart = "456">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A2F51C8C-E9EF-4F72-8569-13C2A9B3EF54"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SalutMonde/Service.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
+            landmarkName = "regCam(endPoint:parameters:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

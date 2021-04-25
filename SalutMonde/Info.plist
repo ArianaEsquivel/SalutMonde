@@ -64,5 +64,10 @@
 	</array>
 	<key>NSCameraUsageDescription</key>
 	<string>Necesitamos usar su camara para leer el código</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>

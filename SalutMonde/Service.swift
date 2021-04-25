@@ -20,7 +20,7 @@ class Service {
     var pCallBack: perfilCallBack?
     
     init() {
-        self.baseUrl = "http://127.0.0.1:3333/v1/"
+        self.baseUrl = "http://23.21.161.238/v1/"
         self.headers = [
             .contentType("application/json")]
 //        self.headersToken = [
@@ -147,6 +147,7 @@ class Service {
     }
     
     func editPerfil(endPoint: String, parameters: [String: String], completionHandler: @escaping (Bool)-> () ) {
+//        print(parameters)
         AF.request(self.baseUrl + endPoint, method: .put, parameters: parameters, encoder: JSONParameterEncoder.default, headers: [.contentType("application/json"), .authorization(bearerToken: App.shared.defaults.object(forKey: "Token") as! String)]).responseJSON { (responseData) in
             switch responseData.result {
             case .success(let data):
@@ -187,15 +188,38 @@ class Service {
     }
     
     func getData(from endpoint: String, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
-        let url = URL(string: "\(self.baseUrl)api/repo/img/\(endpoint ?? "")")!
+        let url = URL(string: "\(self.baseUrl)api/repo/img/\(endpoint)")!
         URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
     
     func downloadImage(from endpoint: String, img: UIImageView) {
         getData(from: endpoint ) { data, response, error in
             guard let data = data, error == nil else { return }
-            DispatchQueue.main.async() { [weak self] in
+            DispatchQueue.main.async() { [] in
                 img.image = UIImage(data: data)
+            }
+        }
+    }
+    
+    func regCam(endPoint: String, parameters:  [String: String], completionHandler: @escaping (Bool)-> ()) {
+        print(parameters)
+        print(self.baseUrl + endPoint)
+        AF.request(self.baseUrl + endPoint, method: .post, parameters: parameters, encoder: JSONParameterEncoder.default, headers: [.contentType("application/json"), .authorization(bearerToken: App.shared.defaults.object(forKey: "Token") as! String)]).responseJSON { (responseData) in
+            print("rdata", responseData.data)
+            switch responseData.result {
+            case .success(let data):
+                print(data)
+                if responseData.response?.statusCode == 201 {
+                    guard let jsonResponse = responseData.value as? [String:Any] else { return }
+                    print(jsonResponse, "jsonResponse")
+                    completionHandler(true)
+                }
+                else {
+                    completionHandler(false)
+                }
+            case .failure(let err):
+                print("erroooor", err.localizedDescription)
+                completionHandler(false)
             }
         }
     }

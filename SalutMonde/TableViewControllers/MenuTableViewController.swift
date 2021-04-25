@@ -10,11 +10,16 @@ import UIKit
 
 var optionsMenu = ["Perfil", "Lista de cámaras", "Agregar cámara"]
 var seguesMenu =  ["showPerfil", "showListaCamaras", "showAgregarCamara"]
+
+
 class MenuTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let noConection = noConectionView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
+//        self.view.addSubview(noConection.build())
+//        internet.backgroundColor = UIColor.black
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

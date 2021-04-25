@@ -18,7 +18,7 @@ class VerFotoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = self.nameFoto
-        let url = URL(string: "http://127.0.0.1:3333/v1/api/repo/img/\(self.nameFoto ?? "")")!
+        let url = URL(string: "http://23.21.161.238/v1/api/repo/img/\(self.nameFoto ?? "")")!
         downloadImage(from: url)
 //        service.downloadImage(from: self.nameFoto, img: ivFoto)
     }

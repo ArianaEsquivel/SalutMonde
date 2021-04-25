@@ -8,13 +8,11 @@
 import UIKit
 
 class Device: Decodable{
-    var device:String = ""
-    var id:String
-    var token:String = ""
+    var code:String = ""
+    var name:String = ""
     
-    internal init(device: String = "", id: String, token: String = "") {
-        self.device = device
-        self.id = id
-        self.token = token
+    internal init(code: String = "", name: String = "") {
+        self.code = code
+        self.name = name
     }
 }

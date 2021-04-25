@@ -16,7 +16,7 @@ class InicioViewController: UIViewController{
         Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(verificar), userInfo: nil, repeats: false)
         
 //        self.ivIconoo = UIImage(data: data)
-        let url = URL(string: "http://127.0.0.1:3333/v1/api/repo/img/imagen.jpeg")!
+        let url = URL(string: "http://23.21.161.238/v1/api/repo/img/imagen.jpeg")!
             downloadImage(from: url)
             print("End of code. The image will continue downloading in the background and it will be loaded when it ends.")
         
@@ -39,12 +39,12 @@ class InicioViewController: UIViewController{
     }
     
     @objc func verificar(){
-//        if (App.shared.defaults.object(forKey: "Token") as! String == "") {
-//            self.performSegue(withIdentifier: "segueGoToInicio", sender: self)
-//        }
-//        else {
+        if (App.shared.defaults.object(forKey: "Token") as! String == "") {
+            self.performSegue(withIdentifier: "segueGoToInicio", sender: self)
+        }
+        else {
             self.performSegue(withIdentifier: "segueGoMenu", sender: self)
-//        }
+        }
     }
 }
 //extension UIImageView {

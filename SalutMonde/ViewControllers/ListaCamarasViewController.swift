@@ -48,6 +48,7 @@ class ListaCamarasViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.nameImage = listaCamaras.cameras?[indexPath.row].name
         self.codeImage = listaCamaras.cameras?[indexPath.row].code
+        self.ipImage = listaCamaras.cameras?[indexPath.row].ip
         print(listaCamaras.cameras?[indexPath.row].code as Any)
         performSegue(withIdentifier: "goToCamaraOp", sender: self)
     }
